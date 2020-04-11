@@ -13,8 +13,12 @@ const covid19ImpactEstimator = (data) => {
   impact.currentlyInfected = reportedCases * 10;
   severeImpact.currentlyInfected = reportedCases * 50;
 
-  impact.infectionsByRequestedTime = Math.trunc(impact.currentlyInfected * (2 ** factor));
-  severeImpact.infectionsByRequestedTime = Math.trunc(severeImpact.currentlyInfected * 512);
+  impact.infectionsByRequestedTime = Math.trunc(
+    impact.currentlyInfected * 2 ** factor
+  );
+  severeImpact.infectionsByRequestedTime = Math.trunc(
+    severeImpact.currentlyInfected * 2 ** factor
+  );
 
   return estimator;
 };
