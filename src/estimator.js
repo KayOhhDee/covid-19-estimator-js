@@ -1,5 +1,7 @@
 const covid19ImpactEstimator = (data) => {
-  const { reportedCases, periodType, timeToElapse } = data;
+  const {
+    reportedCases, periodType, timeToElapse, totalHospitalBeds
+  } = data;
   const estimator = {
     data, // the input data you got
     impact: {}, // your best case estimation
@@ -28,6 +30,17 @@ const covid19ImpactEstimator = (data) => {
   );
   severeImpact.infectionsByRequestedTime = Math.trunc(
     severeImpact.currentlyInfected * (2 ** convertToDays(periodType, timeToElapse))
+  );
+
+  // Challenge 2
+  impact.severeCasesByRequestedTime = (15 / 100) * impact.infectionsByRequestedTime;
+  severeImpact.severeCasesByRequestedTime = (15 / 100) * severeImpact.infectionsByRequestedTime;
+
+  impact.hospitalBedsByRequestedTime = (
+    ((35 / 100) * totalHospitalBeds) * impact.severeCasesByRequestedTime
+  );
+  severeImpact.hospitalBedsByRequestedTime = (
+    ((35 / 100) * totalHospitalBeds) * severeImpact.severeCasesByRequestedTime
   );
 
   return estimator;
