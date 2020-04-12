@@ -21,6 +21,17 @@ const covid19ImpactEstimator = (data) => {
     }
   };
 
+  const convertToNumOfDays = (period, elapseTime) => {
+    switch (period) {
+      case 'weeks':
+        return Math.trunc(elapseTime * 7);
+      case 'months':
+        return Math.trunc(elapseTime * 30);
+      default:
+        return Math.trunc(elapseTime);
+    }
+  };
+
   // Challenge 1
   impact.currentlyInfected = reportedCases * 10;
   severeImpact.currentlyInfected = reportedCases * 50;
@@ -60,13 +71,13 @@ const covid19ImpactEstimator = (data) => {
     (impact.infectionsByRequestedTime
     * region.avgDailyIncomePopulation
     * region.avgDailyIncomeInUSD)
-    / (convertToDays(periodType, timeToElapse) * 3)
+    / convertToNumOfDays(periodType, timeToElapse)
   );
   severeImpact.dollarsInFlight = Math.trunc(
     (severeImpact.infectionsByRequestedTime
     * region.avgDailyIncomePopulation
     * region.avgDailyIncomeInUSD)
-    / (convertToDays(periodType, timeToElapse) * 3)
+    / convertToNumOfDays(periodType, timeToElapse)
   );
 
   return estimator;
