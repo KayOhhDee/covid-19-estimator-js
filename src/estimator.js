@@ -44,8 +44,10 @@ const covid19ImpactEstimator = (data) => {
   );
 
   // Challenge 3
-  impact.casesForICUByRequestedTime = (5 / 100) * impact.infectionsByRequestedTime;
-  severeImpact.casesForICUByRequestedTime = (5 / 100) * severeImpact.infectionsByRequestedTime;
+  impact.casesForICUByRequestedTime = Math.trunc((5 / 100) * impact.infectionsByRequestedTime);
+  severeImpact.casesForICUByRequestedTime = Math.trunc(
+    (5 / 100) * severeImpact.infectionsByRequestedTime
+  );
 
   impact
     .casesForVentilatorsByRequestedTime = Math.trunc((2 / 100) * impact.infectionsByRequestedTime);
