@@ -3,18 +3,7 @@
 body {
   min-width: 320px;
   text-align: center;
-  background: #ff9966; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ff5e62,
-    #ff9966
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #ff5e62,
-    #ff9966
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #FF6262; /* fallback for old browsers */
   font-family: 'Raleway', Helvetica, sans-serif;
 }
 
@@ -31,7 +20,7 @@ body {
   padding-bottom: 5px;
 }
 
-.labels {
+label {
   display: inline-block;
   padding: 10px;
   text-align: right;
@@ -39,7 +28,7 @@ body {
   margin-top: 5px;
   vertical-align: top;
 }
-.fills {
+input{
   display: inline-block;
   width: 40%;
   text-align: left;
@@ -79,19 +68,19 @@ button {
 
 @media screen and (max-width: 833px) {
   .inputclass {
-    width: 80%;
+    width: 45%;
   }
   select {
-    width: 90%;
+    width: 45%;
   }
 }
 
 @media screen and (max-width: 520px) {
-  .labels {
+  label {
     width: 100%;
     text-align: left;
   }
-  .fills {
+  input {
     width: 80%;
     float: left;
   }
