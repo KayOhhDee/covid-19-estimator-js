@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400, 500);
+
+body {
+  min-width: 320px;
+  text-align: center;
+  background: #ff9966; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff5e62,
+    #ff9966
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff5e62,
+    #ff9966
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: 'Raleway', Helvetica, sans-serif;
+}
+
+#container {
+  background: #fafafa;
+  max-width: 850px;
+  border-radius: 0.5%;
+  margin: 0 auto;
+  width: 80%;
+}
+
+#description {
+  padding-top: 35px;
+  padding-bottom: 5px;
+}
+
+.labels {
+  display: inline-block;
+  padding: 10px;
+  text-align: right;
+  width: 35%;
+  margin-top: 5px;
+  vertical-align: top;
+}
+.fills {
+  display: inline-block;
+  width: 40%;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.inputclass {
+  height: 20px;
+  width: 264px;
+  border-radius: 3px;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+  margin: 10px 0px 15px 15px;
+}
+
+.drpdwn {
+  height: 35px;
+  width: 132px;
+  border-radius: 3px;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+  vertical-align: top;
+  margin: 15px 144px 15px 15px;
+}
+
+button {
+  background-color: #FF6162;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 96px;
+  margin: 10px;
+  border: 0px solid;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 833px) {
+  .inputclass {
+    width: 80%;
+  }
+  select {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .labels {
+    width: 100%;
+    text-align: left;
+  }
+  .fills {
+    width: 80%;
+    float: left;
+  }
+  .inputclass {
+    width: 100%;
+  }
+  select {
+    width: 100%;
+  }
+}
