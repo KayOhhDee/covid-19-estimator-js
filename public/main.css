@@ -13,6 +13,8 @@ body {
   border-radius: 0.5%;
   margin: 0 auto;
   width: 80%;
+  color: #000;
+  font-size: 1.2rem;
 }
 
 #description {
@@ -73,6 +75,9 @@ button {
   select {
     width: 45%;
   }
+  #container {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (max-width: 520px) {
@@ -89,5 +94,8 @@ button {
   }
   select {
     width: 100%;
+  }
+  #container {
+    font-size: 1rem;
   }
 }
