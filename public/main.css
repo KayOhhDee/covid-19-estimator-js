@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500&display=swap);
+
+body {
+  min-width: 320px;
+  text-align: center;
+  background: #FF6262; /* fallback for old browsers */
+  font-family: 'Raleway', Helvetica, sans-serif;
+}
+
+#container {
+  background: #fafafa;
+  max-width: 850px;
+  border-radius: 0.5%;
+  margin: 0 auto 4rem;
+  width: 80%;
+  color: #000;
+  font-size: 1.2rem;
+}
+
+#description {
+  padding-top: 35px;
+  padding-bottom: 5px;
+}
+
+label {
+  display: inline-block;
+  padding: 10px;
+  text-align: right;
+  width: 35%;
+  margin-top: 5px;
+  vertical-align: top;
+}
+input{
+  display: inline-block;
+  width: 40%;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.inputclass {
+  height: 20px;
+  width: 264px;
+  border-radius: 3px;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+  margin: 10px 0px 15px 15px;
+}
+
+.drpdwn {
+  height: 35px;
+  width: 132px;
+  border-radius: 3px;
+  border: 1px solid #c0c0c0;
+  padding: 5px;
+  vertical-align: top;
+  margin: 15px 144px 15px 15px;
+}
+
+button {
+  background-color: #ac2828;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 96px;
+  margin: 10px 0 40px;
+  border: 0px solid;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 833px) {
+  .inputclass {
+    width: 45%;
+  }
+  select {
+    width: 45%;
+  }
+  #container {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  label {
+    width: 100%;
+    text-align: left;
+  }
+  input {
+    width: 80%;
+    float: left;
+  }
+  .inputclass {
+    width: 100%;
+  }
+  select {
+    width: 100%;
+  }
+  #container {
+    font-size: 1rem;
+  }
+}
